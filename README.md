@@ -16,8 +16,5 @@ work describtion
    embedding_size = 50  # Dimension of the embedding vector.
    ![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/tsne.png)
 
-   <figure class="half">
-    <img src="https://github.com/thenewcomer/NLP-Test-softeware/blob/master/word2vec01.png">
-    <img src="https://github.com/thenewcomer/NLP-Test-softeware/blob/master/word2vec02.png">
-   </figure>
+   ![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/word2vec_detail.jpg)
 

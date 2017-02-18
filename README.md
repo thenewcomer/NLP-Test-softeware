@@ -7,12 +7,13 @@ work describtion
 
 3. Tag the texts and show the results.
 
+   (https://github.com/thenewcomer/NLP-Test-softeware/tag result.png)
    
-
 4. Save the clean data to file.
 
 5. Use word2vec to train these texts and visualize the results. 
 
    embedding_size = 50  # Dimension of the embedding vector.
+   (https://github.com/thenewcomer/NLP-Test-softeware/tsne.png)
 
   

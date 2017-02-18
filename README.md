@@ -7,7 +7,7 @@ work describtion
 
 3. Tag the texts and show the results.
 
-   ![image](https://github.com/thenewcomer/NLP-Test-softeware/tag result.png)
+   ![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/tag%20result.png)
    
 4. Save the clean data to file.
 

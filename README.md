@@ -1,9 +1,9 @@
 # NLP-Test-softeware
 work describtion 
 
-1. Crawl data from wikipedia. When I enter a web page, I save all the body texts to output file and all urls to a new urls list. Scan the list delete the urls which are used or link to pictures, icons, other languages and other useless pages. Choose an url to enter and delete it from new urls list and add it to the used urls list. I collect 1063 pages and 200M uncleaned text in total.
+1. Crawl data from wikipedia. When I enter a web page, I save all the body texts to output file and all urls to a new urls list. Scan the new urls list and delete the urls which have been used or link to pictures, icons, other languages or other useless pages. Choose an url to enter and delete it from the new urls list and add it to the used urls list. I collect 1063 pages and 200M uncleaned text in total.
 
-2. Clean data
+2. Clean data. I remove all the special characters and check every word to determine whether it is a valid english word. 
 
 3. Tag the texts and show the results.
 

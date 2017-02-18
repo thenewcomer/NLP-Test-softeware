@@ -14,6 +14,6 @@ work describtion
 5. Use word2vec to train these texts and visualize the results. 
 
    embedding_size = 50  # Dimension of the embedding vector.
-   ![image](https://github.com/thenewcomer/NLP-Test-softeware/tsne.png)
+   ![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/tsne.png)
 
   

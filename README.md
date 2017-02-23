@@ -3,13 +3,13 @@
 
 Program: crawlTextFromWeb
 
-![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/tag%20result.png)
+![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/introductionImages/crawlTextFromWeb.png)
 
 This program is a Scrapy project. Except "getSentences.py", "stopwords.txt", and "usedUrls.txt", other files are created automatically by Scrapy.
 
 Program: cleantext.py, word2vector.py
 
-![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/tag%20result.png)
+![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/introductionImages/textPrograms.png)
 
 cleantext.py clean the original text and output clean text. word2vector.py train the clean text and output a visualized result image.
 

@@ -37,19 +37,21 @@ TensorFlow Tutorial: https://www.tensorflow.org/get_started/get_started
 
 2. Clean data. I remove all the special characters and check every word to determine whether it is a valid english word. 
 
-   ![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/tag%20result.png)
+   ![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/resultImages/originalData.png)
+
+   ![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/resultImages/cleanData.png)
 
 3. Tag the texts and show the results.
 
-   ![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/tag%20result.png)
+   ![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/resultImages/tag%20result.png)
 
 4. Save the clean data to file.
 
 5. Use word2vec to train these texts and visualize the results. 
 
    embedding_size = 50  # Dimension of the embedding vector.
-   ![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/tsne.png)
+   ![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/resultImages/tsne.png)
 
   More details:   
-   ![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/word2vec_detail.jpg)
+   ![image](https://github.com/thenewcomer/NLP-Test-softeware/blob/master/resultImages/word2vec_detail.jpg)
 

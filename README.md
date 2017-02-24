@@ -27,9 +27,17 @@ TensorFlow
 
 Here are some useful links:
 
-Scrapy guide: https://doc.scrapy.org/en/1.2/intro/install.html
+Scrapy Tutorial: https://doc.scrapy.org/en/1.2/intro/tutorial.html
 
 TensorFlow Tutorial: https://www.tensorflow.org/get_started/get_started
+
+**Run Crawler**
+
+Go to the project’s top level directory and run:
+
+```python
+scrapy crawl crawlText
+```
 
 **Steps and Results** 
 

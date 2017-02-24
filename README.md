@@ -33,7 +33,7 @@ TensorFlow Tutorial: https://www.tensorflow.org/get_started/get_started
 
 **Run Crawler**
 
-Go to the project’s top level directory and run:
+Go to program crawlTextFromWeb's top level directory and run:
 
 ```python
 scrapy crawl crawlText

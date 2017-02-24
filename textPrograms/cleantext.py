@@ -40,7 +40,7 @@ pp.pprint(tagged[:30]) #Print the top 30 tagged words and their tags
 #Save the cleaned text to file "cleantext.txt"
 newfile = open("cleantext.txt", "wb")
 for words in tokens:
-    #Check whether each word is a valid English word and only save the valid words to this file
+    #Check whether each word is a valid English word and only save the valid words to this output file
     if words.lower() in english_vocab:
         newfile.write(words.lower().encode('utf-8') + " ")
 

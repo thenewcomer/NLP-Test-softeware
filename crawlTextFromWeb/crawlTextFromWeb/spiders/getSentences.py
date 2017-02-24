@@ -6,7 +6,7 @@ from twisted.internet.error import DNSLookupError
 from scrapy.spidermiddlewares.httperror import HttpError
 from twisted.internet.error import TimeoutError
 
-#Start page: the home page of wikipedia
+#Start page: the home page of Wikipedia
 url = 'https://en.wikipedia.org/wiki/Main_Page/'
 
 #Many of wiki's urls are incomplete, like:"/wiki/Epsilon_Eridani", so I should add a head to make it valid
@@ -51,14 +51,14 @@ class getSentences(scrapy.Spider):
             #Config the request
             request = scrapy.Request(url=url, callback=self.parse, dont_filter=True, errback=self.errback_httpbin)
             #Config the cookies and headers, in this way our requests will look like the requests which are sent by browsers
-            #So we can avoid being banned by wiki
+            #So we can avoid being banned by Wikipedia
             request.cookies['over18'] = 1
             request.headers['User-Agent'] = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36')
             #Load usedUrls from file to list "usedUrls"
             with open(usedFileName) as usedfile:
                 usedUrls = usedfile.readlines()
                 usedUrls = [x.strip() for x in usedUrls]
-            #Send request: will visit the home page of wikipedia
+            #Send request: will visit the home page of Wikipedia
             yield request
 
     #The callback function of request

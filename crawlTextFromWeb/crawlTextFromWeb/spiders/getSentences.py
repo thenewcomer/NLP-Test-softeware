@@ -9,7 +9,7 @@ from twisted.internet.error import TimeoutError
 #Start page: the home page of Wikipedia
 url = 'https://en.wikipedia.org/wiki/Main_Page/'
 
-#Many of wiki's urls are incomplete, like:"/wiki/Epsilon_Eridani", so I should add a head to make it valid
+#Many of wiki's URLs are incomplete, like:"/wiki/Epsilon_Eridani", so I should add a head to make it valid
 urlHead = 'https://en.wikipedia.org'
 
 #Count how many pages have been crawled
@@ -18,17 +18,17 @@ pageCount = 0
 #When 10000 pages have been crawled, stop obtain more pages
 totalPagesCrawl = 10000
 
-#The list that save all the new urls
+#The list that saves all the new URLs
 allNewUrls = []
 
-#The used urls should not be used again, so I should save these urls to a file and check every new url whether it has been used
+#The used URLs should not be used again, so I should save these URLs to a file and check every new URL whether it has been used
 usedFileName = "usedUrls.txt"
 
-#The list that save all the used urls, I will check the used urls many times, so read them from memory is fater than read them from file
+#The list that saves all the used URLs, I will check the used URLs many times, so read them from memory is faster than read them from file
 usedUrls = []
 
-#Many urls link to images or icons, I should ignore these urls.
-#These urls usually contain some particular words like "png", "icon", "pdf", "php" and so on.
+#Many URLs link to images or icons, I should ignore these URLs.
+#These URLs usually contain some particular words like "png", "icon", "pdf", "php" and so on.
 #I will read the stop words from "stopWordFile" to list "stopWords".
 #In this way I can modify stop words without change my code.
 stopWordFile = "stopwords.txt"
@@ -88,8 +88,8 @@ class getSentences(scrapy.Spider):
                             textfile.write(text[i].encode('utf-8'))
                         textfile.write("\n".encode('utf-8'))
                     '''
-                        get all the urls of this page and delete the used ones
-                        use these new urls to craw
+                        get all the URLs of this page and delete the used ones
+                        use these new URLs to craw
                     '''
                     validUrl = True
                     if pageCount < totalPagesCrawl:
@@ -98,7 +98,7 @@ class getSentences(scrapy.Spider):
                             #If "http" not in this url, which means this url is incomplete, I should add a head to this url
                             if "http" not in urls[i]:
                                 urls[i] = urlHead + urls[i]
-                        #Remove the used urls, the urls in list newUrls havn't been used but may invalid
+                        #Remove the used URLs, the URLs in list newUrls havn't been used but may invalid
                         newUrls = list(set(urls) - set(usedUrls))
                         #If one url contain any stop words, then it is invalid and will be ignored
                         for i in range(0, len(newUrls)):
@@ -107,19 +107,19 @@ class getSentences(scrapy.Spider):
                                         validUrl = False
                             if validUrl:
                                 allNewUrls.append(newUrls[i])
-                    #If all new urls have been crawled, save the used urls to file
+                    #If all new URLs have been crawled, save the used URLs to file
                     if len(allNewUrls) <= 0:
                         with open(usedFileName, 'wb') as saveusedfile:
                             for i_used in range(0, len(usedUrls)):
                                 saveusedfile.write((usedUrls[i_used] + "\n").encode('utf-8'))
-            #If there are some new and valid urls need to be crawled
+            #If there are some new and valid URLs need to be crawled
             if len(allNewUrls) > 0:
                 print("here is nextUrl ------------", allNewUrls[0])
                 nextUrl = allNewUrls[0]
                 del allNewUrls[0] #delete this url from the list newUrls
                 usedUrls.append(nextUrl) #add this url to the list usedUrls
                 #Config request
-                #dont_filter=True               means don't help me filt urls I will do it myselfe
+                #dont_filter=True               means don't help me filt URLs I will do it myselfe
                 #errback=self.errback_httpbin   means if there is any error occurs, the callback function errback_httpbin will handle it
                 #                               if I don't do this, the program will be interrupted automatically when any error occurs
                 request = scrapy.Request(url=nextUrl, callback=self.parse, dont_filter=True, errback=self.errback_httpbin)

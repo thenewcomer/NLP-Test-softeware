@@ -21,12 +21,6 @@ print type(tokens)
 print len(tokens)
 print tokens[:30]
 
-'''
-text = nltk.Text(tokens)
-print type(text)
-print text[0:30]
-'''
-
 #Lemmatize the text
 wnl = nltk.WordNetLemmatizer()
 lem_text = [wnl.lemmatize(t) for t in tokens]

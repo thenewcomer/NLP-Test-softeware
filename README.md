@@ -31,7 +31,7 @@ Scrapy guide: https://doc.scrapy.org/en/1.2/intro/install.html
 
 TensorFlow Tutorial: https://www.tensorflow.org/get_started/get_started
 
-**Work description** 
+**Steps and Results** 
 
 1. Crawling data from Wikipedia. When I enter a web page, I save all the body texts to an output file and all URLs to a new URLs list. Scan the new URLs list and delete the URLs which have been used or link to pictures, icons, other languages or other useless pages. Choose an URL to enter and delete it from the new URLs list and add it to the used URLs list. I collect 1063 pages and 200M uncleaned text in total.
 
